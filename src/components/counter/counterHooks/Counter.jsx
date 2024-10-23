@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 // import styles from './counter.module.scss';
 
 const Counter = () => {
@@ -12,6 +12,11 @@ const Counter = () => {
     const handleCounterBIncrement = () => {
         setCounterB( prevCount => prevCount + 1 );
     }
+
+    useEffect(() => {
+        const totalCount = counterA + counterB;
+        document.title = `All clicks are ${totalCount}`
+    }, [counterA, counterB])
 
     return (
         <>
