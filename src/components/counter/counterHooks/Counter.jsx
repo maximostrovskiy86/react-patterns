@@ -19,7 +19,7 @@ const Counter = () => {
     }, [counterA, counterB])
 
     return (
-        <>
+        <div>
             <button
                 // className={styles.btn}
                 style={{cursor: 'pointer', marginTop: '25px'}}
@@ -34,7 +34,7 @@ const Counter = () => {
                 onClick={handleCounterBIncrement}>
                 Кликнули каунтерB {counterB} раз
             </button>
-        </>
+        </div>
     )
 }
 

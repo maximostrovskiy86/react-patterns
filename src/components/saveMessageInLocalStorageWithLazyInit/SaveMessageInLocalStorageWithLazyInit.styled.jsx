@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 
+
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-    margin-bottom: 15px;
 
     label {
         display: flex;
