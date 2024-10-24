@@ -2,9 +2,11 @@ import './App.css';
 import Container from "./container";
 // import SignUpForm from "./signUpForm";
 // import Form from "./signUpForm/formOnClass";
+// import SaveMessageInLocalStorageWithLazyInit from "./saveMessageInLocalStorageWithLazyInit";
+import SignUpFormWithCustomHook from "./signUpFormWithCustomHook";
 import ColorPicker from "./colorPicker/ColorPickerHooks/ColorPicker";
 import Counter from "./counter/counterHooks";
-import SaveMessageInLocalStorageWithLazyInit from "./saveMessageInLocalStorageWithLazyInit";
+
 
 
 function App() {
@@ -12,9 +14,10 @@ function App() {
         <div className="App">
             <Container>
                 {/*<SignUpForm/>*/}
-                <SaveMessageInLocalStorageWithLazyInit />
+                {/*<SaveMessageInLocalStorageWithLazyInit/>*/}
                 {/*<Form/>*/}
-                <ColorPicker />
+                <SignUpFormWithCustomHook/>
+                <ColorPicker/>
                 <Counter/>
             </Container>
         </div>

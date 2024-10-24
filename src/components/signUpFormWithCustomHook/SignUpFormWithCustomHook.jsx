@@ -1,14 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {FormContainer} from "../signUpForm/SignUpForm.styled";
+import React from 'react';
+import {FormContainer} from "./SignUpFormWithCustomHook.styled";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
-const SaveMessageInLocalStorageWithLazyInit = () => {
 
-    const [email, setEmail] = useState(() => { // Lazy initial state call (request) just by the first render because it could call every time
-        return JSON.parse(localStorage.getItem('email')) ?? '';
-    });
-    const [textarea, setTextarea] = useState(() => { // Lazy initial state call (request) just by the first render
-        return JSON.parse(localStorage.getItem('textarea')) ?? '';
-    });
+const SignUpFormWithCustomHook = props => {
+
+    const [email, setEmail] = useLocalStorage("email", '');
+    const [textarea, setTextarea] = useLocalStorage("textarea", '');
+
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -25,15 +24,6 @@ const SaveMessageInLocalStorageWithLazyInit = () => {
                 return
         }
     }
-
-    useEffect(() => {
-        window.localStorage.setItem('email', JSON.stringify(email));
-    }, [email])
-
-    useEffect(() => {
-        window.localStorage.setItem('textarea', JSON.stringify(textarea));
-    }, [textarea])
-
 
     return (
         <FormContainer>
@@ -63,4 +53,4 @@ const SaveMessageInLocalStorageWithLazyInit = () => {
     )
 }
 
-export default SaveMessageInLocalStorageWithLazyInit;
+export default SignUpFormWithCustomHook;
