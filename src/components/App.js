@@ -6,21 +6,20 @@ import Container from "./container";
 import SignUpFormWithCustomHook from "./signUpFormWithCustomHook";
 import ColorPicker from "./colorPicker/ColorPickerHooks/ColorPicker";
 import Counter from "./counter/counterHooks";
-
+import ClockWithUseRefHook from "./clockWithUseRefHook";
 
 
 function App() {
     return (
-        <div className="App">
-            <Container>
-                {/*<SignUpForm/>*/}
-                {/*<SaveMessageInLocalStorageWithLazyInit/>*/}
-                {/*<Form/>*/}
-                <SignUpFormWithCustomHook/>
-                <ColorPicker/>
-                <Counter/>
-            </Container>
-        </div>
+        <Container>
+            {/*<SignUpForm/>*/}
+            {/*<SaveMessageInLocalStorageWithLazyInit/>*/}
+            {/*<Form/>*/}
+            <SignUpFormWithCustomHook/>
+            <ColorPicker/>
+            <Counter/>
+            <ClockWithUseRefHook/>
+        </Container>
     );
 }
 
