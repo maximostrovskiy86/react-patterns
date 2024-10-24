@@ -3,10 +3,10 @@ import {FormContainer} from "../signUpForm/SignUpForm.styled";
 
 const SaveMessageInLocalStorageWithLazyInit = () => {
 
-    const [email, setEmail] = useState(() => {
+    const [email, setEmail] = useState(() => { // Lazy initial state call (request) just by the first render because it could call every time
         return JSON.parse(localStorage.getItem('email')) ?? '';
     });
-    const [textarea, setTextarea] = useState(() => {
+    const [textarea, setTextarea] = useState(() => { // Lazy initial state call (request) just by the first render
         return JSON.parse(localStorage.getItem('textarea')) ?? '';
     });
 
