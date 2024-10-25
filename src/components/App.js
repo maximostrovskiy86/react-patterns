@@ -7,6 +7,7 @@ import SignUpFormWithCustomHook from "./signUpFormWithCustomHook";
 import ColorPicker from "./colorPicker/ColorPickerHooks/ColorPicker";
 import Counter from "./counter/counterHooks";
 import ClockWithUseRefHook from "./clockWithUseRefHook";
+import FilterWithUseMemoHook from "./filterWithUseMemoHook";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <ColorPicker/>
             <Counter/>
             <ClockWithUseRefHook/>
+            <FilterWithUseMemoHook/>
         </Container>
     );
 }
