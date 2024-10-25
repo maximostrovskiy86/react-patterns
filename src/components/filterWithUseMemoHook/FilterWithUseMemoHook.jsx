@@ -1,7 +1,6 @@
 import {useState, useMemo} from "react";
 import {FilterWrapper} from './FilterWithUseMemoHook.styled';
 
-
 // Initial List, Component is below
 const initalFriends = [
     "Kolby Thompson",
@@ -108,7 +107,7 @@ const initalFriends = [
 
 const Filter = (props) => {
     const [count, setCount] = useState(0);
-    const [friends, setFriends] = useState(initalFriends);
+    const [friends] = useState(initalFriends);
     const [filter, setFilter] = useState("");
 
     const visibleFriends = useMemo(() => {
